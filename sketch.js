@@ -37,10 +37,19 @@ if(keyWentDown(UP_ARROW)){
   text("Note: Press Up Arrow Key To Feed Drago milk",40,100);
 
 }
+
 function readStock(data){
   foodS=data.val();
 }
+
 function writeStock(x){
+  if (x<=0){
+    x = 0
+  }
+  else{
+    x--
+  }
+  
 database.ref('/').update({
   food:x
 })
