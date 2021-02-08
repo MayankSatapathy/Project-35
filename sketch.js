@@ -29,7 +29,7 @@ text("Food Left: "+foodleft,170,470);
 
 if(keyWentDown(UP_ARROW)){
   dog.addImage(dogimg2);
-  foodleft = foodleft - 1
+  writeStock(foodleft)
 }
   drawSprites();
   fill(255);
